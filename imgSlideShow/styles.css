@@ -1,0 +1,15 @@
+
+#btn {
+    display: block;
+    background-color:yellow;
+    padding: 5px;
+    border-radius: 8px;
+    margin: 10px;
+    
+
+}
+
+.img {
+    width: 300px;
+    height: 200px;
+}

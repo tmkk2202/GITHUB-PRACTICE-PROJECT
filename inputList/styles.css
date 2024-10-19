@@ -1,0 +1,32 @@
+body {
+    background-color: gray;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    background-color: bisque;
+    
+    
+
+}
+.olContainter {
+   margin-top: 20px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   
+
+}
+
+.list-group-item {
+
+}
+
+
+
+.form-control {
+    max-width: 500px;
+    
+}
