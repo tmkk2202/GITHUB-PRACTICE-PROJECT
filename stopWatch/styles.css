@@ -1,0 +1,41 @@
+body {
+    background-color: yellowgreen;
+}
+
+.container {
+    
+      
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.clockDiv {
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 90px;
+    font-weight: 500px;
+}
+
+.msecond {
+    position : relative;
+    
+    margin-bottom: 20px;
+    font-size: 20px;
+    margin-left: 250px;
+}
+
+.btnDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.btn {
+    margin-left: 10px;
+    background-color: aliceblue;
+    cursor: pointer;
+}
