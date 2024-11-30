@@ -1,41 +1,45 @@
 body {
-    background-color: yellowgreen;
+    background-color: olivedrab;
 }
-
-.container {
-    
-      
+.mainContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-}
-
-.clockDiv {
-
     margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: 90px;
-    font-weight: 500px;
-}
-
-.msecond {
-    position : relative;
     
-    margin-bottom: 20px;
-    font-size: 20px;
-    margin-left: 250px;
-}
-
-.btnDiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    
     
 }
+.subDiv{
+    margin-bottom: 10px;
 
-.btn {
-    margin-left: 10px;
-    background-color: aliceblue;
+}
+.subSpan {
+    background-color: yellow;
+    border-radius: 3px;
     cursor: pointer;
+    padding: 5px;
+    display:inline;
+}
+
+.listContainer {
+    margin-top: 10px;
+
+
+}
+
+.crossLine {
+    text-decoration: line-through;
+}
+
+.fa-trash {
+    font-size: 22px;
+    background-color: white;
+    margin-left: 10px;
+}
+
+.inputBox {
+    width: 400px;
+
+    
 }

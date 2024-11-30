@@ -1,58 +1,28 @@
-
-    
-const clockDiv = document.querySelector('.clockDiv');
-const msecond = document.querySelector('.msecond');
-const start = document.querySelector('.start');
-const pause = document.querySelector('.pause');
-const conti = document.querySelector('.continue');
-const reset = document.querySelector('.reset');
-
-let hour = 0, minute = 0, second = 0, milisecond = 0;
-let x;
-
-const displayFunc = () => {
-    const msText = milisecond < 10 ? "00" + milisecond.toString() : milisecond < 100 ? "0" + milisecond.toString() : milisecond;
-    const secText = second < 10 ? "0" + second.toString() : second;
-    const minText = minute < 10 ? "0" + minute.toString() : minute;
-    const hrText = hour < 10 ? "0" + hour.toString() : hour;
-    clockDiv.textContent = `${ hrText } : ${ minText } : ${ secText }`;
-    msecond.textContent = msText;
-}
-const func = () => {
-    milisecond += 1;
-    if (milisecond === 1000) {
-        second += 1;
-        milisecond = 0;
-        if (second === 60) {
-            minute += 1;
-            second = 0;
-            if (minute === 60) {
-                hour += 1;
-                minute = 0;
-            }
-        }
-    }
-    
-    displayFunc();
-        
-};
+const inputText = document.querySelector('.inputBox');
+const listContainer = document.querySelector('.listContainer');
 
 
-start.addEventListener('click', () => {
-    x = setInterval(func, 1);
-});
+counter = 0;
+inputText.addEventListener('change', (x) => {
+    const inputValue = x.target.value.trim();
+    counter += 1;
+    const subDiv = document.createElement('div');
+    const subSpan = document.createElement('span');
+    const numInputValue = counter + ". " + inputValue;
+    const trash = document.createElement("i");
+    trash.classList.add('fa-solid', 'fa-trash');
+    listContainer.append(subDiv);
+    subDiv.append(subSpan);
+    subSpan.append(numInputValue, trash);
+    inputText.value = "";
 
-pause.addEventListener('click', () => {
-    clearInterval(x);
-});
+subSpan.addEventListener('click', () => {
+    subSpan.classList.toggle('crossLine');
+    })
+trash.addEventListener('click',() => {
+    subDiv.remove();
+    })
 
-conti.addEventListener('click', () => {
-    clearInterval(x);
-    x = setInterval(func, 1);
-});
 
-reset.addEventListener('click', () => {
-    clearInterval(x);
-    hour = 0, minute = 0, second = 0, milisecond = 0;
-    displayFunc();
-});
+})
+
