@@ -7,7 +7,7 @@
 //  <i class="fa-regular fa-trash-can"></i>
 
 
-const inputBox = document.getElementsByClassName('form-control')[0];
+const inputBox = document.getElementsByClassName('formContainer')[0];
 const listContainer = document.getElementsByClassName('listContainer')[0];
 
 
